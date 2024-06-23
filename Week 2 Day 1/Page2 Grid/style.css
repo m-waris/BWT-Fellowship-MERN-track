@@ -109,18 +109,10 @@ nav a:hover{
 }
 .grid {
     display: grid;
+    grid-template-columns: repeat(2,1fr);
     gap: 1rem;
 }
-@media (min-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 767px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 .box {
     background-color: #433790;
