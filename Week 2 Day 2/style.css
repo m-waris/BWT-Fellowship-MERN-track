@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: rgb(236, 237, 246);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    border-top: solid 5px white;
+    border-bottom: solid 5px white;
+    background: rgb(2,0,36);
+    background: linear-gradient(300deg, rgba(2,0,36,1) 0%, rgba(23,11,65,1) 41%, rgba(15,17,82,1) 100%);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: xx-large;
+    }
+}
+@media (max-width: 766px) {
+    h1 {
+        font-size: large;
+    }
+}
+h2{
+    font-size:x-large;
+}
+h3 {
+    font-size: larger;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+footer {
+    text-align: center;
+
+    margin-top: 20px;
+    padding: 50px;
+    background-color: #1e1e1e;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background: transparent;
+}
+#contact{
+    width: 50%;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.5s;
+}
+nav{
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    top : 0;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: #ffffff 2px solid;
+   
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 20px;
+}
+nav a{
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+}
+nav a:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.box {
+    background-color: #433790;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    padding: 5rem;
+    text-align: center;
+}
