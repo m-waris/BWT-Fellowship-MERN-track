@@ -1,0 +1,298 @@
+// Variables
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Raleway', sans-serif;
+
+$color-dark-blue: hsl(243, 87%, 12%);
+$color-desaturated-blue: hsl(238, 22%, 44%);
+$color-bright-blue: hsl(224, 93%, 58%);
+$color-moderate-cyan: hsl(170, 45%, 43%);
+$color-light-grayish-blue: hsl(240, 75%, 98%);
+$color-light-gray: hsl(0, 0%, 75%);
+
+$font-size-base: 16px;
+$font-size-large: 2.5rem;
+$font-size-medium: 1rem;
+$font-size-small: 0.7rem;
+
+$padding-large: 4rem 5rem;
+$padding-medium: 2rem 4rem;
+$padding-small: 1rem;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $color-dark-blue;
+}
+
+h1 {
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: $font-size-large;
+}
+
+p {
+  font-weight: 400;
+  font-size: $font-size-medium;
+}
+
+nav {
+  @include flex-center;
+  justify-content: space-between;
+  padding: $padding-medium;
+
+  img {
+    @media (min-width: 768px) {
+      width: 120px;
+    }
+    @media (max-width: 768px) {
+      width: 90px;
+    }
+  }
+
+  ul {
+    @include flex-center;
+    list-style: none;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-desaturated-blue;
+  font-weight: 700;
+  margin-right: 2rem;
+
+  &:hover {
+    color: $color-dark-blue;
+  }
+}
+
+.hero {
+  @include flex-center;
+  padding: $padding-large;
+  gap: 4rem;
+
+  img {
+    width: 650px;
+  }
+}
+
+input {
+  padding: $padding-small;
+  width: 50%;
+  margin-right: 2rem;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+}
+
+button {
+  padding: $padding-small;
+  background-color: $color-bright-blue;
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color-bright-blue, 0.546);
+  }
+}
+
+.intro {
+  padding: $padding-large;
+  background-color: $color-light-grayish-blue;
+  @include flex-center;
+
+  img {
+    width: 600px;
+  }
+
+  p {
+    width: 80%;
+  }
+}
+
+.curve {
+  background-image: url('./images/bg-curve-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.testimonial {
+  @include flex-column;
+  justify-content: space-between;
+  background-color: white;
+  width: 50%;
+  padding: $padding-small;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 25px;
+  }
+
+  p {
+    font-size: $font-size-medium;
+    font-weight: 400;
+  }
+
+  .person {
+    @include flex-center;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+
+    img {
+      width: 50px;
+      border-radius: 50%;
+    }
+
+    .person_info {
+      @include flex-column;
+      gap: 0;
+
+      p {
+        font-size: $font-size-small;
+        margin-top: -0.5rem;
+      }
+
+      h3 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-top: -0.1rem;
+      }
+    }
+  }
+}
+
+.link {
+  color: $color-moderate-cyan;
+  font-size: $font-size-medium;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  @include flex-center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  &:hover {
+    color: rgba($color-moderate-cyan, 0.712);
+  }
+
+  img {
+    width: 20px;
+  }
+}
+
+.cta {
+  @include flex-center;
+  gap: 1rem;
+  padding: $padding-large;
+  background-color: $color-desaturated-blue;
+  color: white;
+
+  p {
+    width: 50%;
+  }
+
+  .cta_email {
+    @include flex-column;
+    gap: 1rem;
+
+    input {
+      padding: $padding-small;
+      width: 100%;
+      margin-right: 2rem;
+    }
+  }
+}
+
+footer {
+  background-color: $color-dark-blue;
+  color: white;
+  padding: $padding-medium;
+  @include flex-center;
+  justify-content: space-between;
+
+  img {
+    width: 120px;
+  }
+
+  ul {
+    @include flex-column;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  a {
+    color: white;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 2rem 2rem;
+
+    img {
+      width: 80%;
+    }
+  }
+
+  .intro {
+    flex-direction: column;
+    padding: 2rem 2rem;
+  }
+
+  .testimonial {
+    width: 80%;
+  }
+
+  .info_img img {
+    width: 80%;
+  }
+
+  .cta {
+    flex-direction: column;
+    padding: 2rem 2rem;
+
+    p {
+      width: 100%;
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    ul {
+      align-items: center;
+    }
+  }
+}
