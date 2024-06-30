@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <title>Tailwind CSS</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="text-[hsl(243,87%,12%)] font-sans">
+  <header>
+    <nav class="flex justify-between items-center py-8 px-16">
+      <img src="./images/logo.svg" alt="Fylo logo" class="w-30 md:w-24">
+      <ul class="flex list-none space-x-8">
+        <li><a href="#" class="text-[hsl(238,22%,44%)] hover:text-[hsl(243,87%,12%)]">Features</a></li>
+        <li><a href="#" class="text-[hsl(238,22%,44%)] hover:text-[hsl(243,87%,12%)]">Team</a></li>
+        <li><a href="#" class="text-[hsl(238,22%,44%)] hover:text-[hsl(243,87%,12%)]">Sign In</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class=" flex flex-col md:flex-row items-center py-16 px-20 space-y-16 md:space-y-0 md:space-x-16">
+    <div class="">
+      <h1 class=" font-bold text-4xl">All your files in one secure location, accessible anywhere.</h1>
+      <p class="font-normal text-base">Fylo stores your most important files in one secure location. Access them wherever you need, share and
+        collaborate with friends, family, and co-workers.</p>
+      <form class="email flex flex-col md:flex-row mt-4">
+        <input type="email" name="" id="" class="p-4 w-full md:w-auto md:mr-4 mb-4 md:mb-0">
+        <button class="p-4 bg-hsl(224,93%,58%) text-white font-bold hover:bg-hsl(224,93%,58%,0.546)">Get Started</button>
+      </form>
+    </div>
+
+    <div class="">
+      <img src="./images/illustration-1.svg" alt="Illustration" class="w-full md:w-2/3">
+    </div>
+  </section>
+
+  <div class=" h-52 bg-cover bg-center" style="background-image: url('./images/bg-curve-desktop.svg')"></div>
+
+  <section class=" py-16 px-20 flex flex-col md:flex-row space-y-16 md:space-y-0 md:space-x-16" style="background-color: hsl(240,75%,98%);">
+    <div class="">
+      <h1 class=" font-bold text-4xl">Stay productive, wherever you are</h1>
+      <p class=" text-base w-4/5">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage
+        needs.</p>
+      <p class="font-normal text-base w-4/5">Securely share files and folders with friends, family and colleagues for live collaboration. No email
+        attachments required!</p>
+      <div class=" text-[hsl(170,45%,43%)] text-base underline mt-4 flex items-center space-x-2">
+        <span>See how Fylo works</span>
+        <img src="./images/icon-arrow.svg" alt="" class="w-5">
+      </div>
+      <div class=" bg-white w-1/2 p-4 rounded-lg shadow-md mt-8">
+        <img src="./images/icon-quotes.svg" alt="icon-quotes" class="w-6">
+        <p class="text-base font-normal mt-2">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become
+          a well-oiled collaboration machine.</p>
+        <div class="person flex items-start space-x-4 mt-4">
+          <img src="./images/avatar-testimonial.jpg" alt="avatar-testimonial" class="w-12 rounded-full">
+          <div class="person_info flex flex-col space-y-0">
+            <h3 class=" font-bold text-sm mt-0.5">Kyle Burton</h3>
+            <p class="text-xs mt-0.5">Founder & CEO, Huddle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <img src="./images/illustration-2.svg" alt="Illustration" class="w-full md:w-3/4">
+    </div>
+  </section>
+
+  <section class=" text-white py-16 px-20 flex flex-col md:flex-row space-y-16 md:space-y-0 md:space-x-16" style="background-color: hsl(228, 45%, 44%) ;">
+    <div>
+      <h2 class="  font-bold text-3xl">Get early access today</h2>
+      <p class="font-normal text-base w-full md:w-1/2">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions,
+        our support team would be happy to help you.</p>
+    </div>
+    <form class=" flex flex-col space-y-4 w-full md:w-1/2">
+      <input type="email" class="p-4 w-full">
+      <button class="p-4 bg-[hsl(224,93%,58%)] text-white font-bold hover:bg-hsl(224,93%,58%,0.546)">Get Started For Free</button>
+    </form>
+  </section>
+
+  <footer class=" text-white py-8 px-20 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0" style="background-color: hsl(243,87%,12%);">
+    <div class="flex flex-col items-center md:items-start">
+      <img src="./images/logo.svg" alt="logo" class="w-30 text-white">
+      <p>Phone: 123-456-7890</p>
+      <p>Email: Fylo@example.com</p>
+    </div>
+    <div>
+      <ul class="flex flex-col list-none space-y-2 items-center md:items-start">
+        <li><a href="#" class="text-white">About Us</a></li>
+        <li><a href="#" class="text-white">Jobs</a></li>
+        <li><a href="#" class="text-white">Press</a></li>
+        <li><a href="#" class="text-white">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="flex flex-col list-none space-y-2 items-center md:items-start">
+        <li><a href="#" class="text-white">Contact Us</a></li>
+        <li><a href="#" class="text-white">Terms</a></li>
+        <li><a href="#" class="text-white">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="socials flex space-x-4">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+  </footer>
+
+</body>
+
+</html>
